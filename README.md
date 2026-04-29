@@ -1,8 +1,8 @@
-Airport Reservation System API
+# Airport Reservation System API
 
 A backend API for managing flight reservations, passengers, tickets, and authentication built with FastAPI and SQLAlchemy.
 
-Tech Stack
+## Tech Stack
 
 • FastAPI
 • SQLAlchemy (ORM)
@@ -12,7 +12,7 @@ Tech Stack
 • Uvicorn
 • SMTP Email (Password reset system)
 
-Overview
+## Overview
 
 This project simulates a real-world airport reservation system where users can:
 
@@ -23,7 +23,7 @@ This project simulates a real-world airport reservation system where users can:
 • Manage flight-seat assignments
 • Receive email-based password reset links
 
-Architecture
+## Architecture
 
 The project follows a clean layered architecture:
 
@@ -35,7 +35,7 @@ Routers (API endpoints)
 ↓
 Database (SQLAlchemy Session)
 
-Database Design
+## Database Design
 
 Built using SQLAlchemy ORM with relationships between:
 
@@ -45,7 +45,7 @@ Built using SQLAlchemy ORM with relationships between:
 • Flight
 • Ticket
 
-Key Relationships:
+## Key Relationships:
 
 • A User has many Reservations
 • A Reservation belongs to one Flight
@@ -53,7 +53,7 @@ Key Relationships:
 • Each Passenger gets a Ticket
 • Ticket is linked to Flight + Passenger + Reservation
 
-Features Implemented
+## Features Implemented
 
 Authentication
 
@@ -123,45 +123,62 @@ Reservations
 Tickets
 • GET /ticket/{ticket_id}
 
-Installation & Run
-
-git clone https://github.com/taradiz00/ticket-online.git
-cd ticket-online
-
-pip install -r requirements.txt
-
-uvicorn main:app --reload
-
-Database Seeding
+## Database Seeding
 
 To populate database with fake data:
 
-python seed.py
+python qollabi_records.py
+Faker-based generator script included
 
-(Faker-based generator script included)
+## Key Learnings
 
-Key Learnings
-• Designing relational database with ORM
-• Handling complex relationships (Reservation → Passenger → Ticket)
-• Schema validation using Pydantic
-• Building RESTful APIs with FastAPI
-• Email integration for password recovery
-• Writing basic tests with Pytest
-• Structuring scalable backend architecture
+    • Designing relational database with ORM
+    • Handling complex relationships (Reservation → Passenger → Ticket)
+    • Schema validation using Pydantic
+    • Building RESTful APIs with FastAPI
+    • Email integration for password recovery
+    • Writing basic tests with Pytest
+    • Structuring scalable backend architecture
 
-Future Improvements
-• Payment gateway integration (Stripe)
-• Role-based access (Admin/User)
-• Deployment on cloud (Render / Railway)
-• Async email queue (Celery + Redis)
-• Better seat allocation algorithm
+## Future Improvements
+
+    • Payment gateway integration (Stripe)
+    • Role-based access (Admin/User)
+    • Deployment on cloud (Render / Railway)
+    • Async email queue (Celery + Redis)
+    • Better seat allocation algorithm
+
+## Installation & Run
+
+### 1. Clone repo
+
+```bash
+git clone https://github.com/taradiz00/ticket-online.git
+cd ticket-online
+
+2. Create virtual environment
+
+python -m venv venv
+venv/Scripts/activate
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+4. Run server
+
+uvicorn main:app --reload
+
+
 
 Swagger UI
 
 API documentation available at:
 
-/docs
+http://127.0.0.1:8000/docs
 
 Author
+Tara Dizaji
 
 Built as a backend portfolio project for learning and demonstrating real-world API development skills.
+```
