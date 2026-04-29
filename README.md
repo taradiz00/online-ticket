@@ -126,7 +126,7 @@ Tickets
 Installation & Run
 
 git clone https://github.com/taradiz00/ticket-online.git
-cd airport-api
+cd ticket-online
 
 pip install -r requirements.txt
 
