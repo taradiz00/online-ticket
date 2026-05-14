@@ -1,4 +1,4 @@
-# Airport Reservation System API
+# Flight Reservation System API
 
 A backend API for managing flight reservations, passengers, tickets, and authentication built with FastAPI and SQLAlchemy.
 
@@ -20,7 +20,6 @@ This project simulates a real-world airport reservation system where users can:
 • Create flight reservations
 • Add passengers to reservations
 • Automatically generate tickets per passenger
-• Manage flight-seat assignments
 • Receive email-based password reset links
 
 ## Architecture
